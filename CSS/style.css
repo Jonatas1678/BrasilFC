@@ -1,20 +1,24 @@
-body{
+body {
     margin: 4px;
     padding: 3px;
 }
 
-#tri{
+#tri {
+    background-color: #D02213;
+    border-radius: 20px;
     width: 300px;
     font-size: 23px;
     align-items: flex-start;
     display: flex;
 }
-#tri img{
-    padding-left: 25px;
+
+#tri img {
+    padding-top: 1.4px;
+    padding-left: 20px;
     width: 47px;
 }
 
-#sant{
+#sant {
     background-color: rgb(0, 0, 0);
     color: white;
     border-radius: 20px;
@@ -24,12 +28,14 @@ body{
     display: flex;
     align-items: flex-start;
 }
-#sant img{
-    padding-left: 27px;
+
+#sant img {
+    padding-top: 3px;
+    padding-left: 22px;
     width: 49px;
 }
 
-#pal{
+#pal {
     background-color: rgb(0, 255, 55);
     color: white;
     border-radius: 20px;
@@ -39,40 +45,79 @@ body{
     display: flex;
     align-items: flex-start;
 }
-#pal img{
+
+#pal img {
+    padding-top: 2px;
     padding-left: 14px;
-    width: 39px;
-}
-
-#co{
-    border-radius: 20px;
-    width: 300px;
-    font-size: 24px;
-    display: flex;
-
-}
-#co img{
-    padding-left: 25px;
-    width: 41px;
-}
-
-#fla{
-    border-radius: 20px;
-    width: 300px;
-    font-size: 24px;
-    display: flex;
-}
-#fla img{
-    padding-left: 25px;
     width: 40px;
 }
 
-.au{
+#co {
+    border-radius: 20px;
+    width: 300px;
+    font-size: 24px;
+    display: flex;
+
+}
+
+#co img {
+    padding-top: -12px;
+    padding-left: 20px;
+    width: 43px;
+}
+
+#fla {
+    background-color: #CD3529;
+    border-radius: 20px;
+    width: 300px;
+    font-size: 24px;
+    display: flex;
+}
+
+#fla img {
+    padding-top: 4px;
+    padding-left: 20px;
+    width: 42px;
+}
+
+
+#flu {
+    background-color: #CD3529;
+    border-radius: 20px;
+    width: 300px;
+    font-size: 24px;
+    display: flex;
+}
+
+#flu img {
+    padding-top: 4px;
+    padding-left: 20px;
+    width: 42px;
+}
+
+#cru {
+    background-color: #2B519F;
+    color: white;
+    border-radius: 20px;
+    width: 300px;
+    font-size: 24px;
+    flex-direction: row;
+    display: flex;
+    align-items: flex-start;
+}
+
+#cru img {
+    padding-top: 2px;
+    padding-left: 20px;
+    width: 45px;
+}
+
+.au {
     width: 306px;
     display: flex;
 }
 
-.box1{
+.box1 {
     width: 100%;
     font-size: 25px;
     text-align: center;
@@ -81,22 +126,22 @@ body{
     border-radius: 9px 9px 52px 52px;
 }
 
-.bb{
-    
+.bb {
+
     align-items: flex-start;
 }
 
-.secti{
+.secti {
     border-top-width: 5px;
     border-left-width: 11px;
-    border-width: 5px  9px;
+    border-width: 5px 9px;
     padding: 10px;
     display: flex;
     align-items: flex-start;
     position: relative;
 }
 
-#button1{
+#button1 {
     background-color: rgb(211, 38, 38);
     padding-left: 12px;
     padding-right: 13px;
@@ -108,7 +153,7 @@ body{
     position: relative;
 }
 
-#idCadastrar{
+#idCadastrar {
     background-color: rgb(240, 218, 129);
     padding-left: 8px;
     padding-right: 8px;
@@ -119,7 +164,7 @@ body{
     text-align: center;
 }
 
-.dev{
+.dev {
     padding-left: 8px;
     margin-left: 3px;
     font-size: 14px;
