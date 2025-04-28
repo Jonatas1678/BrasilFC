@@ -15,7 +15,7 @@ body {
 #tri img {
     padding-top: 1.4px;
     padding-left: 20px;
-    width: 47px;
+    width: 50px;
 }
 
 #sant {
@@ -36,7 +36,7 @@ body {
 }
 
 #pal {
-    background-color: rgb(0, 255, 55);
+    background-color: #006437;
     color: white;
     border-radius: 20px;
     width: 300px;
@@ -82,7 +82,8 @@ body {
 
 
 #flu {
-    background-color: #CD3529;
+    background-color: #00693E;
+    color: white;
     border-radius: 20px;
     width: 300px;
     font-size: 24px;
