@@ -60,15 +60,13 @@ fieldset {
     width: 50px;
 }
 
-/* Player de Áudio */
 .au {
     width: 100%;
 }
 
-/* Botão de Cadastro */
 #idCadastrar {
     display: inline-block;
-    background-color: #ffc107;
+    background-color: #f83513;
     color: black;
     padding: 10px 20px;
     text-decoration: none;
@@ -86,7 +84,6 @@ aside {
     text-align: center;
 }
 
-/* Rodapé / Desenvolvedor */
 .dev {
     text-align: center;
     margin-top: 30px;
@@ -105,11 +102,6 @@ aside {
     background-color: #1B5E20;
 }
 
-.corinthians {
-    background-color: #eeeeee;
-    color: black;
-}
-
 .flamengo {
     background-color: #C22A1E;
 }
@@ -118,13 +110,12 @@ aside {
     background-color: #00693E;
 }
 
-.vasco {
-    background-color: #E2231A;
-    color: black;
-}
-
 .cruzeiro {
     background-color: #2B519F;
+}
+
+.primavera {
+    background-color: #ED1C24;
 }
 
 @media (max-width: 768px) {
