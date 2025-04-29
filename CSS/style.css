@@ -1,6 +1,8 @@
 body {
     margin: 4px;
     padding: 3px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
 }
 
 
@@ -8,7 +10,6 @@ body {
     border-radius: 20px;
     width: 300px;
     font-size: 23px;
-    align-items: flex-start;
     display: flex;
 }
 
@@ -109,8 +110,10 @@ body {
 }
 
 .au {
-    width: 306px;
+    width: 100%;
     display: flex;
+    justify-content: center;
+    margin-top: 5px;
 }
 
 .box1 {
@@ -120,29 +123,30 @@ body {
     padding: 14px;
     border: 3px solid pink;
     border-radius: 9px 9px 52px 52px;
+    margin-bottom: 10PX;
 }
 
 .bb {
-
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 5px;
 }
 
 #button1 {
     background-color: rgb(211, 38, 38);
-    padding-left: 12px;
-    padding-right: 13px;
+    padding: 8PX 12px;
     margin: 6px;
     font-size: 17px;
     color: rgb(30, 30, 30);
     border-radius: 12px;
-    display: flex;
-    position: relative;
+    border: none;
+    cursor: pointer;
 }
 
 #idCadastrar {
     background-color: rgb(240, 218, 129);
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 8px;
     margin: 7px;
     font-size: 16px;
     color: rgb(30, 30, 30);
@@ -174,5 +178,14 @@ body {
 @media (max-width: 768px) {
     .bb {
         grid-template-columns: 1fr;
+    }
+
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card img {
+        padding-left: 0;
     }
 }
