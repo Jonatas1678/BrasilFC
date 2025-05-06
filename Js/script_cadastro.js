@@ -15,12 +15,16 @@ console.log("Instância do Firestore DB:", db);
 });
 
 const cpfInput = document.querySelector('#idDocumento');
+
 if (cpfInput) {
     aplicarMascaraCPF(cpfInput);
 
-    cpfInput.addEventListener("input", () => {
-        if (validarCPF(cpfInput.value)) {
-            cpfInput.style.border = "";
+    cpfInput.addEventListener("blur", () => {
+        const cpfValido = validarCPF(cpfInput.value);
+        if (!cpfValido) {
+            cpfInput.classList.add("cpf-invalido");
+        } else {
+            cpfInput.classList.remove("cpf-invalido");
         }
     });
 } else {
@@ -31,11 +35,9 @@ function aplicarMascaraCPF(input) {
     input.addEventListener("input", () => {
         let valor = input.value.replace(/\D/g, "");
         if (valor.length > 11) valor = valor.slice(0, 11);
-
         valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
         valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
         valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-
         input.value = valor;
     });
 }
