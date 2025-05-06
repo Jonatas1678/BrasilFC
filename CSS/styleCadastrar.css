@@ -1,14 +1,96 @@
-fieldset {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-image: "wp1974261.webp";
-    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #FFD700, #008000, #0000FF);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+legend h2 {
+    text-align: center;
+    background: linear-gradient(to right, #FFD700, #008000, #0000FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 button {
+    margin-top: 20px;
     background-color: rgb(255, 0, 0);
     color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+
+    input[type="radio"] {
+        margin-left: 0;
+    }
 }
