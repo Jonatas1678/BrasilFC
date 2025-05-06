@@ -67,13 +67,21 @@ fieldset {
 #idCadastrar {
     display: inline-block;
     background-color: #f83513;
-    color: black;
+    color: rgb(0, 0, 0);
     padding: 10px;
+    border: none;
     text-decoration: none;
     font-size: 18px;
     border-radius: 12px;
     margin: 20px auto;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#idCadastrar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #idCadastrar:hover {
