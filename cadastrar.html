@@ -8,106 +8,105 @@
     <title>Brasil FC | CADASTRO</title>
     <link rel="shortcut icon" href="./images/BRASILFC.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS/styleCadastrar.css">
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyClA0l16DsIP-ChT4JCILNQEcCTkNzLib0",
+            authDomain: "brasil-fc.firebaseapp.com",
+            projectId: "brasil-fc",
+            storageBucket: "brasil-fc.appspot.com",
+            messagingSenderId: "437204996520",
+            appId: "1:437204996520:web:dd97ad9a8852309ae40d9d",
+            measurementId: "G-JSZEXDTG85"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        window.db = db; // deixa disponível para o script externo
+    </script>
 </head>
 
 <body>
-    <form name="Preferências" method="get" action="Cadastrar">
-
+    <form id="cadastroForm">
         <fieldset>
-            <form method="get">
-                <legend>
-                    <h2>Cadastro</h2>
-                </legend>
+            <legend>
+                <h2>Cadastro</h2>
+            </legend>
 
-                <div>
-                    <label for="idNome">Nome:</label>
-                    <input type="text" name="nome" id="idNome" required placeholder="Digite seu nome completo">
-                    <label for="idDocumento">CPF:</label>
-                    <input type="text" name="Documento" id="idDocumento" required placeholder="Digite seu CPF:">
-                    <label for="idDataNascto" name="dataNasc">Data Nascimento</label>
-                    <input type="date" id="idDataNascto" required>
-                </div>
-                <div>
-                    <label for="idEmail">E-mail:</label>
-                    <input type="email" name="email" id="idEmail" required placeholder="Digite seu Email:">
+            <label for="idNome">Nome:</label>
+            <input type="text" id="idNome" required placeholder="Digite seu nome completo">
 
-                    <label for="idTipoEmail"> Tipo E-mail:</label>
-                    <input type="radio" name="tipoEmail" id="idTipoEmail" value="Comercial">
-                    <label for="idTipoEmail">Comercial</label>
-                    <input type="radio" name="tipoEmail" id="idTipoEmail" value="Pessoal">
-                    <label for="idTipoEmail">Pessoal</label>
-                </div>
-                <div>
-                    <label for="idEstado">Estado:</label>
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-                    <select name="estado">
-                        <option value="" selected disabled>Selecione</option>
-                        <option value="ac">Acre</option>
-                        <option value="al">Alagoas</option>
-                        <option value="am">Amazonas</option>
-                        <option value="ap">Amapá</option>
-                        <option value="ba">Bahia</option>
-                        <option value="ce">Ceará</option>
-                        <option value="df">Distrito Federal</option>
-                        <option value="es">Espírito Santo</option>
-                        <option value="go">Goiás</option>
-                        <option value="ma">Maranhão</option>
-                        <option value="mt">Mato Grosso</option>
-                        <option value="ms">Mato Grosso do Sul</option>
-                        <option value="mg">Minas Gerais</option>
-                        <option value="pa">Pará</option>
-                        <option value="pb">Paraíba</option>
-                        <option value="pr">Paraná</option>
-                        <option value="pe">Pernambuco</option>
-                        <option value="pi">Piauí</option>
-                        <option value="rj">Rio de Janeiro</option>
-                        <option value="rn">Rio Grande do Norte</option>
-                        <option value="ro">Rondônia</option>
-                        <option value="rs">Rio Grande do Sul</option>
-                        <option value="rr">Roraima</option>
-                        <option value="sc">Santa Catarina</option>
-                        <option value="se">Sergipe</option>
-                        <option value="sp">São Paulo</option>
-                        <option value="to">Tocantins</option>
-                    </select>
-                    <input type="text" id="idCid" required placeholder="Cidade:">
-                </div>
-                <div>
-                    <label name="Seu sexo" for="idSexo">Sexo:</label>
-                    <input type="radio" name="Seu sexo" id="idHom" value="H">
-                    <label for="idHm">Homem</label>
-                    <input type="radio" name="Seu sexo" id="idMu" value="Sexo">
-                    <label for="idMl">Mulher</label>
-                    <input type="radio" name="Seu sexo" id="idNd" value="Nada">
-                    <label for="idNd">Não declarar</label>
-                    <input type="radio" name="Seu sexo" id="idNde" value="Sexo">
-                    <label for="idOt"></label>
-                    <input type="text" name="Seu sexo" id="idOutro" autocomplete="off" placeholder="outro:">
-                </div>
-                <div>
-                    <label for="idSituação">Situação:</label>
-                    <input type="radio" name="Situação" id="idNamo" value="Namorando">
-                    <label for="idNamo">Namorando</label>
-                    <input type="radio" name="Situação" id="idCasad" value="Casad">
-                    <label for="idCasa">Casado(a)</label>
-                    <input type="radio" name="Situação" id="idSolt" value="Solteir">
-                    <label for="idSolteiro">Solteiro(a)</label>
-                </div><br>
-                <fieldset>
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Limpar">
-                </fieldset>
-            </form>
-        </fieldset><br>
+            <label for="idDocumento">CPF:</label>
+            <input type="text" id="idDocumento" required placeholder="Digite seu CPF:">
+
+            <label for="idDataNascto">Data de Nascimento</label>
+            <input type="date" id="idDataNascto" required>
+
+            <label for="idEmail">E-mail:</label>
+            <input type="email" id="idEmail" required placeholder="Digite seu Email:">
+
+            <label>Tipo de E-mail:</label>
+            <input type="radio" name="tipoEmail" value="Comercial"> Comercial
+            <input type="radio" name="tipoEmail" value="Pessoal"> Pessoal
+
+            <label for="idEstado">Estado:</label>
+            <select name="estado" id="idEstado" required>
+                <option value="" selected disabled>Selecione</option>
+                <option value="ac">Acre</option>
+                <option value="al">Alagoas</option>
+                <option value="am">Amazonas</option>
+                <option value="ap">Amapá</option>
+                <option value="ba">Bahia</option>
+                <option value="ce">Ceará</option>
+                <option value="df">Distrito Federal</option>
+                <option value="es">Espírito Santo</option>
+                <option value="go">Goiás</option>
+                <option value="ma">Maranhão</option>
+                <option value="mt">Mato Grosso</option>
+                <option value="ms">Mato Grosso do Sul</option>
+                <option value="mg">Minas Gerais</option>
+                <option value="pa">Pará</option>
+                <option value="pb">Paraíba</option>
+                <option value="pr">Paraná</option>
+                <option value="pe">Pernambuco</option>
+                <option value="pi">Piauí</option>
+                <option value="rj">Rio de Janeiro</option>
+                <option value="rn">Rio Grande do Norte</option>
+                <option value="ro">Rondônia</option>
+                <option value="rs">Rio Grande do Sul</option>
+                <option value="rr">Roraima</option>
+                <option value="sc">Santa Catarina</option>
+                <option value="se">Sergipe</option>
+                <option value="sp">São Paulo</option>
+                <option value="to">Tocantins</option>
+            </select>
+
+            <label for="idCid">Cidade:</label>
+            <input type="text" id="idCid" required placeholder="Cidade">
+
+            <label name="Seu sexo">Sexo:</label>
+            <input type="radio" name="sexo" value="Homem"> Homem
+            <input type="radio" name="sexo" value="Mulher"> Mulher
+            <input type="radio" name="sexo" value="Não declarar"> Não declarar
+
+            <label>Situação:</label>
+            <input type="radio" name="situacao" value="Namorando"> Namorando
+            <input type="radio" name="situacao" value="Casado(a)"> Casado(a)
+            <input type="radio" name="situacao" value="Solteiro(a)"> Solteiro(a)
+
+            <br><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </fieldset>
     </form>
+
     <button>
-        <H5><a href="index.html">HOME</a></H5>
+        <a href="index.html">HOME</a>
     </button>
 
-    <script src="Js\script_cadastro.js"></script>
-    <script type="text/javascript">
-        alert('Estamos testando ainda e no momento não estamos recebendo seus dados ainda!');
-    </script>
+    <script type="module" src="Js/script_cadastro.js"></script>
 </body>
 
 </html>
