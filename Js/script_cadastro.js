@@ -1,9 +1,8 @@
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
 
-// Verifica se o script foi carregado corretamente
 console.log("script_cadastro.js carregado!");
 
-const db = window.db; // Acesso ao Firestore, verifique se o db está disponível
+const db = window.db;
 console.log("Instância do Firestore DB:", db);
 
 ['#idNome', '#idDocumento', '#idEmail'].forEach(id => {
@@ -81,12 +80,10 @@ if (form) {
         const situacaoRadio = document.querySelector('input[name="situacao"]:checked');
         const situacao = situacaoRadio ? situacaoRadio.value : 'Não informado';
 
-        // Verifica os dados coletados
         console.log("Dados coletados do formulário:", {
             nome, cpf, dataNascimento, email, tipoEmail, estado, cidade, sexo, situacao
         });
 
-        // Verifica se todos os campos obrigatórios foram preenchidos
         if (!nome || !cpf || !dataNascimento || !email || !estado || !cidade || !sexo || !situacao) {
             alert("Por favor, preencha todos os campos obrigatórios.");
             return;
