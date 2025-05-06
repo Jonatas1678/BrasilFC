@@ -50,7 +50,7 @@ Este projeto foi criado com o objetivo de reunir os hinos oficiais dos principai
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/brasil-fc.git
+   git clone https://github.com/Jonatas1678/brasil-fc.git
    ```
 
 2. Abra o arquivo `index.html` no navegador.
