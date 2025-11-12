@@ -55,8 +55,9 @@ input[type="email"],
 input[type="date"],
 select {
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.7);
     font-size: 1rem;
 }
 
