@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Helvetica Neue", Arial, Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to right, #FFD700, #019101, #0000FF);
     min-height: 100vh;
     display: flex;
@@ -21,10 +21,13 @@ body {
 }
 
 form {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 35px;
+    box-shadow: 0 4 30px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
 }
@@ -48,6 +51,7 @@ legend h2 {
 label {
     font-weight: bold;
     margin-top: 10px;
+    color: #333;
 }
 
 input[type="text"],
@@ -68,9 +72,9 @@ input[type="radio"] {
 
 input[type="submit"],
 input[type="reset"] {
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 1rem;
     cursor: pointer;
 }
