@@ -12,6 +12,8 @@ console.log(titulo1.innerHTML);
 titulo1.style.background = 'linear-gradient(to right, #FFD700, #008000, #0000FF)'
 titulo1.style.backgroundClip = 'text';
 titulo1.style.color = 'transparent';
+titulo1.style.webkitBackgroundClip = 'text';
+titulo1.style.webkitTextFillColor = 'transparent';
 
 
 document.getElementsByClassName('')
