@@ -23,3 +23,19 @@ let cadastrar = document.querySelector('#idCadastrar')
 cadastrar.addEventListener('submit', () => {
     alert("se cadastrar")
 })
+
+function filterClubs() {
+    const input = document.getElementById('search');
+    const filter = input.value.toUpperCase();
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        const h2 = card.querySelector('h2');
+        const txtValue = h2.textContent || h2.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
